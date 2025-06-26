@@ -1,0 +1,50 @@
+.claims-container {
+  position: relative;
+  background-image: url('src/assets/landscape3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 2rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.claims-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.claims-list-container {
+  z-index: 1;
+}
+
+.claims-list-heading {
+  font-family: 'Poppins', sans-serif;
+  color: #eaeaea;
+  position: relative;
+  z-index: 1;
+  font-size: 4.5em;
+  font-weight: 600;
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.2;
+  padding: 2rem 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+}

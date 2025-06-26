@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProfile } from "../../services/api";
 import type { ProfileResponse } from "../../types/Profile";
+import QuickMenuCarousel from "../../components/QuickMenuCarousel";
 import "./HomePage.css";
 
 export default function HomePage() {
@@ -17,7 +18,10 @@ export default function HomePage() {
 
   return (
     <div className="homepage-container">
-      {user ? <div>Welcome, {user.first_name}!</div> : <div>Loading...</div>}
+      <h1 className="homepage-greeting">Welcome, {user?.first_name}!</h1>
+      <div className="carousel-wrapper">
+        <QuickMenuCarousel />
+      </div>
     </div>
   );
 }

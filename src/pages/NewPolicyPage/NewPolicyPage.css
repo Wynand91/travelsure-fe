@@ -1,0 +1,32 @@
+.new-policy-container {
+  position: relative;
+  background-image: url('src/assets/landscape2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 2rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.new-policy-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.policy-form-container {
+  z-index: 1;
+}

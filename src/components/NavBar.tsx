@@ -1,20 +1,25 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ onLogout }: { onLogout: () => void }) {
   const navigate = useNavigate();
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const handleLogout = () => {
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
+    onLogout();
     navigate("/");
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div className="container-fluid px-4">
-        <Link className="navbar-brand fw-bold" to="/home">
+        <Link
+          className="navbar-brand fw-bold"
+          style={{ color: "#4B6EAF" }}
+          to="/home"
+        >
           TravelSure
         </Link>
 

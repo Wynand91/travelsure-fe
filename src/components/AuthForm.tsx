@@ -45,88 +45,87 @@ export default function AuthForm({ onAuthSuccess }: AuthFormProps) {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
-      <div className="w-100" style={{ maxWidth: "400px" }}>
-        <form
-          onSubmit={handleSubmit}
-          className="p-4 border rounded shadow-sm bg-light"
-        >
-          <h2 className="mb-3">Create Account</h2>
+    <div className="w-100" style={{ maxWidth: "400px" }}>
+      <form
+        onSubmit={handleSubmit}
+        className="p-4 border rounded shadow-sm bg-light"
+      >
+        <h2 className="mb-3 text-center">Create Account</h2>
 
-          {error && <div className="alert alert-danger">{error}</div>}
+        {error && <div className="alert alert-danger">{error}</div>}
 
-          <div className="mb-3">
-            <label className="form-label">Username</label>
-            <input
-              className="form-control"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-          </div>
+        <div className="mb-3">
+          <input
+            className="form-control"
+            placeholder="Email"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
 
-          <div className="mb-3">
-            <label className="form-label">First Name</label>
-            <input
-              className="form-control"
-              value={first_name}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
-            />
-          </div>
+        <div className="mb-3">
+          <input
+            className="form-control"
+            placeholder="First Name"
+            value={first_name}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+        </div>
 
-          <div className="mb-3">
-            <label className="form-label">Last Name</label>
-            <input
-              className="form-control"
-              value={last_name}
-              onChange={(e) => setLastName(e.target.value)}
-              required
-            />
-          </div>
+        <div className="mb-3">
+          <input
+            className="form-control"
+            placeholder="Last Name"
+            value={last_name}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </div>
 
-          <div className="mb-3">
-            <label className="form-label">Password</label>
-            <input
-              type="password"
-              className="form-control"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-                setShowPasswordRules(true);
-              }}
-              onFocus={() => setShowPasswordRules(true)}
-              onBlur={() => {
-                if (!password) setShowPasswordRules(false); // hide if empty
-              }}
-              required
-            />
-          </div>
-          {/* Password Rules */}
-          {showPasswordRules && (
-            <ul className="list-unstyled mt-2">
-              {passwordRules.map((rule, index) => {
-                const passed = rule.test(password);
-                return (
-                  <li
-                    key={index}
-                    className={`d-flex align-items-center ${
-                      passed ? "text-success" : "text-muted"
-                    }`}
-                  >
-                    <span className="me-2">{passed ? "\u2705" : "\u274C"}</span>
-                    <span>{rule.label}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
-
+        <div className="mb-3">
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setShowPasswordRules(true);
+            }}
+            onFocus={() => setShowPasswordRules(true)}
+            onBlur={() => {
+              if (!password) setShowPasswordRules(false); // hide if empty
+            }}
+            required
+          />
+        </div>
+        {/* Password Rules */}
+        {showPasswordRules && (
+          <ul className="list-unstyled mt-2">
+            {passwordRules.map((rule, index) => {
+              const passed = rule.test(password);
+              return (
+                <li
+                  key={index}
+                  className={`d-flex align-items-center ${
+                    passed ? "text-success" : "text-muted"
+                  }`}
+                >
+                  <span className="me-2">{passed ? "\u2705" : "\u274C"}</span>
+                  <span>{rule.label}</span>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+        <div className="d-flex justify-content-center">
           <button className="btn btn-primary" type="submit">
             Sign Up
           </button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 }

@@ -1,0 +1,51 @@
+.login-container {
+  position: relative;
+  background-image: url('/src/assets/london.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.login-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login-heading {
+  font-size: 3.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #d0d8e6;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 4px 8px rgba(75, 110, 175, 0.4);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.login-box {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-form a.text-primary:hover {
+  text-decoration: underline !important;
+}

@@ -1,5 +1,9 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .dropdown-collapse {
-  position: static !important; /* normal flow */
+  position: static !important;
   width: auto !important;
   box-shadow: none !important;
   background-color: transparent !important;
@@ -9,16 +13,17 @@
 }
 
 /* Only apply dropdown styles on small screens (less than 992px, Bootstrap lg breakpoint) */
-@media (max-width: 991.98px) {
+@media (max-width: 990px) {
+
   .dropdown-collapse {
     position: absolute !important;
     top: 100%;
     right: 0;
-    background-color: #121212;
+    background-color: #212529 !important;
     border-radius: 0.25rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 200px;
-    z-index: 1050;
+    z-index: 9999 !important;
     padding: 0.5rem 0;
   }
   .dropdown-collapse ul {
