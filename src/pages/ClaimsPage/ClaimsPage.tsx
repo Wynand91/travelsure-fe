@@ -1,4 +1,4 @@
-import ClaimsList from "../../components/ClaimsList";
+import ClaimsList from "../../components/ClaimsList/ClaimsList";
 import "./ClaimsPage.css";
 
 export default function ClaimsPage() {

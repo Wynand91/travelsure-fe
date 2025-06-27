@@ -1,6 +1,6 @@
 import { useState } from "react";
-import type { AuthResponse } from "../types/Auth";
-import { registerUser } from "../services/api";
+import { registerUser } from "../../services/api";
+import type { AuthResponse } from "../../types/Auth";
 
 interface AuthFormProps {
   onAuthSuccess: (auth: AuthResponse) => void;

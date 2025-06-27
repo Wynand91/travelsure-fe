@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import PolicyList from "../../components/PolicyList";
 import "./PolicyPage.css";
+import PolicyList from "../../components/PolicyList/PolicyList";
 
 export default function PolicyPage() {
   const navigate = useNavigate();

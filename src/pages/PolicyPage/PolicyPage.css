@@ -1,6 +1,6 @@
 .policy-container {
   position: relative;
-  background-image: url('src/assets/landscape2.jpg');
+  background-image: url('/images/landscape2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

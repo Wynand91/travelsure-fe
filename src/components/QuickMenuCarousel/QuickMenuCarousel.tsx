@@ -12,7 +12,7 @@ const quickMenuItems = [
   {
     label: "Get Cover",
     className: "bg-cover",
-    path: "/new-policy",
+    path: "/policies/new",
     description: "Take out a new policy for an upcoming trip.",
   },
   {
@@ -20,12 +20,6 @@ const quickMenuItems = [
     className: "bg-claims",
     path: "/claims",
     description: "Track the status of your submitted claims.",
-  },
-  {
-    label: "New Claim",
-    className: "bg-new-claim",
-    path: "/new-claim",
-    description: "Submit a new claim.",
   },
 ];
 

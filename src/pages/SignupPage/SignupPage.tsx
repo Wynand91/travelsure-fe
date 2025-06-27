@@ -1,7 +1,7 @@
 import type { AuthResponse } from "../../types/Auth";
-import AuthForm from "../../components/AuthForm";
 import { useNavigate } from "react-router-dom";
 import "./SignupPage.css";
+import AuthForm from "../../components/AuthForm/AuthForm";
 
 export default function SignupPage() {
   const navigate = useNavigate();

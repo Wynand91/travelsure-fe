@@ -1,6 +1,6 @@
 .new-claim-container {
   position: relative;
-  background-image: url('src/assets/landscape3.jpg');
+  background-image: url('/images/landscape3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -29,4 +29,10 @@
 
 .claim-form-container {
   z-index: 1;
+}
+
+.form-wrapper {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2rem 3rem;
+  border-radius: 12px;
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProfile } from "../../services/api";
 import type { ProfileResponse } from "../../types/Profile";
-import QuickMenuCarousel from "../../components/QuickMenuCarousel";
+import QuickMenuCarousel from "../../components/QuickMenuCarousel/QuickMenuCarousel";
 import "./HomePage.css";
 
 export default function HomePage() {

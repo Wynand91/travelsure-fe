@@ -1,6 +1,6 @@
 .claims-container {
   position: relative;
-  background-image: url('src/assets/landscape3.jpg');
+  background-image: url('/images/landscape3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
