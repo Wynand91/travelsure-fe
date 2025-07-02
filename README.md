@@ -63,12 +63,12 @@ This is a demo travel insurance app that allows users to sign up, create, and ma
 
 5. Open your browser and go to http://localhost:5173
 
-## Screenshots running app
+## Screenshots of running app
 
 ![login](./public/images/ts_login.png)
 ![home](./public/images/ts_home.png)
 ![policy](./public/images/ts_policy.png)
-![claims](./public/images/ts_claim.gif)
+![claims](./public/images/ts_claim.png)
 
 ## License
 
