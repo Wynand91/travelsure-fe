@@ -1,28 +1,39 @@
+/* eslint-disable */
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
-import prettier from 'eslint-plugin-prettier';
 import globals from 'globals';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 
 export default [
   js.configs.recommended,
   {
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
+      parser: tsParser,
       parserOptions: {
-        ecmaVersion: 'latest',
+        project: './tsconfig.app.json',
+        tsconfigRootDir: process.cwd(),
         sourceType: 'module',
         ecmaFeatures: { jsx: true },
       },
       globals: {
         ...globals.browser,
         ...globals.es2021,
+        ...globals.node,
+        process: 'readonly',
       },
     },
     plugins: {
       react,
-      prettier,
+      '@typescript-eslint': tseslint,
     },
     rules: {
-      'prettier/prettier': 'error',
+      // TypeScript rules
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_'}],
+      
+      // React rules
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
     },
