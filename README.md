@@ -68,7 +68,7 @@ This is a demo travel insurance app that allows users to sign up, create, and ma
 ![login](./public/images/ts_login.png)
 ![home](./public/images/ts_home.png)
 ![policy](./public/images/ts_policy.png)
-![claims](./public/images/claims.gif)
+![claims](./public/images/ts_claim.gif)
 
 ## License
 
